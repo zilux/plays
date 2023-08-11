@@ -1,12 +1,4 @@
 ---
-- name: Test collection example on zilux.tempie.message collection/role
-  hosts: localhost
-  become: false
-  vars:
-    sat_host: pipo
-
-  tasks:
-
-    - name: Using role from collection
-      ansible.builtin.import_playbook:
-        name: zilux.tempie.site
+- name: Using role from collection
+  ansible.builtin.import_playbook:
+    name: zilux.tempie.site
