@@ -2,6 +2,8 @@
 - name: Test collection example on zilux.tempie.message collection/role
   hosts: localhost
   become: false
+  vars:
+    sat_host: pipo
 
   tasks:
 
