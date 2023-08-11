@@ -1,0 +1,10 @@
+---
+- name: Test collection example on zilux.tempie.message collection/role
+  hosts: localhost
+  become: false
+
+  tasks:
+
+    - name: Using role from collection
+      ansible.builtin.import_role:
+        name: zilux.tempie.message
