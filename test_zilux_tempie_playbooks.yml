@@ -8,5 +8,5 @@
   tasks:
 
     - name: Using role from collection
-      ansible.builtin.import_play:
+      ansible.builtin.import_playbook:
         name: zilux.tempie.site
