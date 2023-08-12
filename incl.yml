@@ -7,14 +7,8 @@
 
   tasks:
 
-    - name: IMPORT Using role from collection
-      ansible.builtin.import_role:
-        name: zilux.tempie.message
-      tags:
-        - importRole 
-
     - name: INCLUDE Using role from collection
       ansible.builtin.include_role:
         name: zilux.tempie.message
       tags:
-        - importRole 
+        - in 

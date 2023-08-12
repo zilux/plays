@@ -1,0 +1,49 @@
+---
+- name: Test collection example on zilux.tempie.message collection/role
+  hosts: localhost
+  become: false
+
+  tasks:
+
+    - include_vars: vars/sat_vars.yml
+
+    - name: IMPORT Using role from collection
+      ansible.builtin.import_role:
+        name: zilux.tempie.prereqs
+      tags:    
+        - prereqs 
+
+    - name: IMPORT Using role from collection
+      ansible.builtin.import_role:
+        name: zilux.tempie.subscribe
+      tags:    
+        - subscribe 
+
+    - name: IMPORT Using role from collection
+      ansible.builtin.import_role:
+        name: zilux.tempie.installation
+      tags:    
+        - installation 
+
+    - name: IMPORT Using role from collection
+      ansible.builtin.import_role:
+        name: zilux.tempie.manifest
+      tags:    
+        - manifest 
+
+    # emuleer import_role      
+    - name: IMPORT Using role from collection
+      ansible.builtin.import_role:
+        name: zilux.tempie.config
+      tags:    
+        - config 
+
+#    # emuleer import_role      
+#    - name: IMPORT Using role from collection
+#      ansible.builtin.include_role:
+#        name: zilux.tempie.config
+#        apply:    
+#          tags:    
+#            - config 
+#      tags:
+#        - always
